@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q23</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #toggleButton {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton">CLICK FOR SUPRISE</button>
+
+    <script>
+        const button = document.getElementById("toggleButton");
+        let isBackgroundColorChanged = false;
+
+        button.addEventListener("click", function() {
+            const body = document.body;
+
+            if (isBackgroundColorChanged) {
+                
+                body.style.backgroundColor = "red";
+            } else {
+                
+                body.style.backgroundColor = "lightblue";
+            }
+
+            
+            isBackgroundColorChanged = !isBackgroundColorChanged;
+        });
+    </script>
+</body>
+</html>
